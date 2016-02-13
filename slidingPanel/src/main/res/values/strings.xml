@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SlidingPanel</string>
+    <string name="title_activity_panel">PanelActivity</string>
 </resources>
