@@ -2,11 +2,11 @@ package com.tomek.slidingpanel.panel.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.tomek.slidingpanel.R;
+import com.tomek.slidingpanel.panel.view.SlidingDialog;
 import com.tomek.slidingpanel.utils.activity.BaseActivity;
 
 import butterknife.Bind;
@@ -25,10 +25,14 @@ public class PanelActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                showNewDialog();
             }
         });
+    }
+
+    private void showNewDialog() {
+        SlidingDialog dialog = SlidingDialog.newInstance();
+        dialog.show(getSupportFragmentManager(), "dialog");
     }
 
 }
