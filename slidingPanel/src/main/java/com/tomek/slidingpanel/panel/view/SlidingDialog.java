@@ -25,7 +25,7 @@ public class SlidingDialog extends AppCompatDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sliding_panel, null);
         getDialog().getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        getDialog().getWindow().setAttributes(Utils.setDialogLayoutParams(getActivity(), getDialog(), 0.3));
+        getDialog().getWindow().setAttributes(Utils.setDialogLayoutParams(getActivity(), getDialog(), 0.4));
         getDialog().getWindow().setGravity(Gravity.BOTTOM);
         view.setPadding(0,50,0,0);
         return view;
